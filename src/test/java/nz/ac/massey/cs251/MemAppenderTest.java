@@ -1,3 +1,13 @@
+/*
+ * 159.251 – Software Design and Construction
+ * Assignment 2: Custom Log4j Appender (MemAppender) Unit Tests
+ * Author: Lagi Rabo (ID: 04225368)
+ *
+ * Description:
+ *   This test suite validates the behaviour of the MemAppender class.
+ *   It checks correct Singleton behaviour, dependency injection,
+ *   size management, layout enforcement, and correct log discarding logic.
+ */
 package nz.ac.massey.cs251;
 
 import org.apache.log4j.Layout;
@@ -16,17 +26,35 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Unit tests for the MemAppender class.
+ * These tests confirm that:
+ *  - Singleton design pattern is enforced.
+ *  - Dependency injection works for both List and Layout objects.
+ *  - The appender trims old logs correctly and tracks discarded counts.
+ *  - Layouts are required before formatting.
+ *  - Clearing logs does not count as discarding.
+ */
 class MemAppenderTest {
 
+    // Shared Logger used across tests
     private static final String LOGGER_NAME = "MemAppenderTestLogger";
     private Logger logger;
 
+    /**
+     * Runs before each test case.
+     * Ensures a fresh logger and a reset MemAppender state.
+     */
     @BeforeEach
     void setup() {
-        MemAppender._resetForTests();
-        logger = Logger.getLogger(LOGGER_NAME);
+        MemAppender._resetForTests();               // Reset singleton instance
+        logger = Logger.getLogger(LOGGER_NAME);     // Get a dedicated logger for tests
     }
 
+    /**
+     * Runs after each test case.
+     * Cleans up by detaching appenders and resetting state.
+     */
     @AfterEach
     void teardown() {
         // Detach all appenders from this logger
@@ -34,6 +62,11 @@ class MemAppenderTest {
         MemAppender._resetForTests();
     }
 
+    /**
+     * Test 1:
+     * Confirms that only one instance of MemAppender can exist.
+     * Calling getInstance() multiple times should always return the same object.
+     */
     @Test
     void singleton_is_enforced() {
         MemAppender a = MemAppender.getInstance();
@@ -41,6 +74,12 @@ class MemAppenderTest {
         assertSame(a, b, "Expected same singleton instance");
     }
 
+    /**
+     * Test 2:
+     *  Ensures that dependency injection for the backing list works correctly.
+     *  The injected List (LinkedList here) should be the one used internally
+     *  by MemAppender — verified using reflection to inspect the private field.
+     */
     @Test
     void dependency_injection_backing_list_is_used() throws Exception {
         List<LoggingEvent> injected = new LinkedList<>();
@@ -53,6 +92,12 @@ class MemAppenderTest {
         assertSame(injected, internal, "MemAppender should use injected backing list");
     }
 
+
+    /**
+     * Test 3:
+     * Verifies that layouts can be injected either through the constructor
+     * or later via the setter method. Both should work safely.
+     */
     @Test
     void dependency_injection_layout_via_constructor_or_setter() {
         Layout velocity = new VelocityLayout("X $m");
@@ -65,6 +110,12 @@ class MemAppenderTest {
         // No exception expected
     }
 
+    /**
+     * Test 4:
+     * Confirms that when the maximum size (maxSize) is reached:
+     *  - The oldest log entries are removed.
+     *  - The discarded log count increases correctly.
+     */
     @Test
     void maxSize_trims_oldest_and_tracks_discarded() {
         MemAppender app = MemAppender.getInstance();
@@ -90,6 +141,11 @@ class MemAppenderTest {
         assertTrue(lines.get(2).contains("D"));
     }
 
+    /**
+     * Test 5:
+     * Ensures that calling getEventStrings() without a layout set
+     * results in an IllegalStateException (as required by specification).
+     */
     @Test
     void getEventStrings_requires_layout() {
         MemAppender app = MemAppender.getInstance();
@@ -97,6 +153,12 @@ class MemAppenderTest {
         assertThrows(IllegalStateException.class, app::getEventStrings);
     }
 
+    /**
+     * Test 6:
+     * Verifies that printLogs():
+     *  - Prints log messages and then clears them from memory.
+     *  - Does NOT increase the discarded log counter (since clearing ≠ discarding).
+     */
     @Test
     void printLogs_prints_and_clears_but_does_not_increase_discarded() {
         MemAppender app = MemAppender.getInstance();
