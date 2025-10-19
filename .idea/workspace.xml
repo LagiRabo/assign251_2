@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37e05e6f-107a-4dfd-bf02-f2cbfd246adc" name="Changes" comment="Assignment files">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jacoco-sessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/performance-analysis.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/MemAppender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/MemAppender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/VelocityLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/VelocityLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/MemAppenderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/MemAppenderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/StressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/StressTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="34C6m0h0LV2KQxsw0WmxiE6dITQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,7 +41,6 @@
     "JUnit.StressTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/lagir/assign251_2/src/main/java/nz/ac/massey/cs251",
     "onboarding.tips.debug.path": "C:/Users/lagir/assign251_2/src/main/java/nz/ac/massey/cs251/Main.java"
@@ -87,28 +76,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760773234432</updated>
     </task>
-    <task id="LOCAL-00003" summary="Assignment files">
-      <option name="closed" value="true" />
-      <created>1760793146977</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1760793146977</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Assignment files">
-      <option name="closed" value="true" />
-      <created>1760859950716</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1760859950716</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Assignment files" />
     <option name="LAST_COMMIT_MESSAGE" value="Assignment files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/nz/ac/massey/cs251/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
