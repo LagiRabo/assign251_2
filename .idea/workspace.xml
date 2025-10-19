@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37e05e6f-107a-4dfd-bf02-f2cbfd246adc" name="Changes" comment="Assignment files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/StressTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nz/ac/massey/cs251/StressTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +22,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="34C6m0h0LV2KQxsw0WmxiE6dITQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -41,6 +43,7 @@
     "JUnit.StressTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/lagir/assign251_2/src/main/java/nz/ac/massey/cs251",
     "onboarding.tips.debug.path": "C:/Users/lagir/assign251_2/src/main/java/nz/ac/massey/cs251/Main.java"
@@ -76,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760773234432</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Assignment files">
+      <option name="closed" value="true" />
+      <created>1760793146977</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760793146977</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
